@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - MR.GRU & MS.LUCY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="scroll-locked">
+    <audio id="wedding-audio" src="assets/audio/minion song.mp3" loop preload="auto"></audio>
+
+    <!-- Cover Overlay -->
+    <div id="cover" class="cover-overlay d-flex align-items-center justify-content-center text-center">
+        <div class="cover-content p-4 p-md-5 rounded-4 shadow-lg">
+            <p class="subtitle text-uppercase mb-1">The Wedding of</p>
+            <h1 class="couple-title display-3 my-2">GRU &  LUCY</h1>
+            <p class="wedding-date mb-4"><i class="fa-regular fa-calendar-check me-2"></i>Sabtu, 12 Desember 2026</p>  
+            <div class="guest-box p-3 rounded-3 mb-4 border border-light-subtle">
+                <p class="small text-light-50 mb-1">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <h3 id="guest-name" class="h4 m-0 text-gold-light">Andika</h3>
+            </div>
+
+            <button id="btn-open" class="btn btn-gold rounded-pill px-4 py-2 fw-semibold">
+                <i class="fa-solid fa-envelope-open me-2"></i> Buka Undangan
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating Music Button -->
+    <button id="btn-music" class="music-float-btn hidden" aria-label="Toggle Music">
+        <i id="music-icon" class="fa-solid fa-music"></i>
+    </button>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section d-flex align-items-center justify-content-center text-center">
+            <div class="hero-content reveal">
+                <p class="subtitle text-uppercase">Walimatul 'Ursy</p>
+                <h1 class="main-title display-1 fw-normal">GRU & LUCY</h1>
+                <p class="date-text fs-4">12 . 12 . 2026</p>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section py-5">
+            <div class="container reveal">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card card-custom p-4 text-center border-0 shadow-sm">
+                            <div class="card-body">
+                                <i class="fa-solid fa-quote-left fs-1 text-gold mb-3"></i>
+                                <p class="fst-italic fs-5 text-secondary">
+                                    "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+                                </p>
+                                <span class="fw-bold text-gold-dark d-block mt-3">QS. Ar-Rum: 21</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mempelai Section -->
+        <section class="couple-section py-5">
+            <div class="container">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="section-title">Pasangan Mempelai</h2>
+                    <p class="text-muted">Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan.</p>
+                </div>
+
+                <div class="row g-4 align-items-center justify-content-center">
+                    <!-- Mempelai Pria -->
+                    <div class="col-md-5 col-lg-4 reveal">
+                        <div class="card card-custom text-center p-4 h-100 border-0 shadow-sm">
+                            <div class="avatar-frame mx-auto mb-3">
+                                <img src="assets/img/gru.jpg" alt="Gru" class="img-fluid rounded-circle">
+                            </div>
+                            <h3 class="h4 text-gold-dark font-serif">GRU, S.T.</h3>
+                            <p class="small text-muted mb-3">Putra Pertama dari<br>Bpk. H. Muji & Ibu Hj. Siti</p>
+                            <div>
+                                <a href="#" class="btn btn-outline-gold btn-sm rounded-pill"><i class="fa-brands fa-instagram me-1"></i> @GRU</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 text-center ampersand my-3 my-md-0 reveal">&</div>
+
+                    <!-- Mempelai Wanita -->
+                    <div class="col-md-5 col-lg-4 reveal">
+                        <div class="card card-custom text-center p-4 h-100 border-0 shadow-sm">
+                            <div class="avatar-frame mx-auto mb-3">
+                                <img src="assets/img/lucy.jpg" alt="Lucy" class="img-fluid rounded-circle">
+                            </div>
+                            <h3 class="h4 text-gold-dark font-serif">LUCY, S.E.</h3>
+                            <p class="small text-muted mb-3">Putri Kedua dari<br>Bpk. Ir. Bambang & Ibu Hj. Rani</p>
+                            <div>
+                                <a href="#" class="btn btn-outline-gold btn-sm rounded-pill"><i class="fa-brands fa-instagram me-1"></i> @LUCY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Timer Section -->
+        <section class="timer-section py-5 text-white text-center">
+            <div class="container reveal">
+                <h2 class="section-title text-gold-light">Menghitung Hari</h2>
+                <p class="mb-4">Kami menanti kehadiran Anda di hari bahagia kami</p>
+                
+                <div class="row justify-content-center g-2 g-md-3">
+                    <div class="col-3 col-sm-2">
+                        <div class="timer-box p-3 rounded-3">
+                            <span id="days" class="display-6 fw-bold d-block">00</span>
+                            <small class="text-uppercase text-gold-light">Hari</small>
+                        </div>
+                    </div>
+                    <div class="col-3 col-sm-2">
+                        <div class="timer-box p-3 rounded-3">
+                            <span id="hours" class="display-6 fw-bold d-block">00</span>
+                            <small class="text-uppercase text-gold-light">Jam</small>
+                        </div>
+                    </div>
+                    <div class="col-3 col-sm-2">
+                        <div class="timer-box p-3 rounded-3">
+                            <span id="minutes" class="display-6 fw-bold d-block">00</span>
+                            <small class="text-uppercase text-gold-light">Menit</small>
+                        </div>
+                    </div>
+                    <div class="col-3 col-sm-2">
+                        <div class="timer-box p-3 rounded-3">
+                            <span id="seconds" class="display-6 fw-bold d-block">00</span>
+                            <small class="text-uppercase text-gold-light">Detik</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rangkaian Acara -->
+        <section class="event-section py-5">
+            <div class="container">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="section-title">Rangkaian Acara</h2>
+                    <p class="text-muted">Dengan memohon rahmat Allah, kami bermaksud menyelenggarakan acara:</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- Akad Nikah -->
+                    <div class="col-md-6 col-lg-5 reveal">
+                        <div class="card card-custom text-center p-4 h-100 border-0 shadow-sm border-top-gold">
+                            <div class="event-icon mx-auto mb-3"><i class="fa-solid fa-ring"></i></div>
+                            <h3 class="h4 text-gold-dark font-serif">Akad Nikah</h3>
+                            <p class="mb-1"><i class="fa-regular fa-calendar me-2 text-gold"></i>Sabtu, 12 Desember 2026</p>
+                            <p class="mb-3"><i class="fa-regular fa-clock me-2 text-gold"></i>08.00 - 10.00 WIB</p>
+                            <div class="bg-light p-3 rounded-3 mb-3">
+                                <strong class="d-block text-dark">Masjid Agung Kota</strong>
+                                <span class="small text-muted">Jl. Pahlawan No. 123, Surabaya, Jawa Timur</span>
+                            </div>
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold rounded-pill mt-auto">
+                                <i class="fa-solid fa-map-location-dot me-1"></i> Lihat Peta Lokasi
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Resepsi Pernikahan -->
+                    <div class="col-md-6 col-lg-5 reveal">
+                        <div class="card card-custom text-center p-4 h-100 border-0 shadow-sm border-top-gold">
+                            <div class="event-icon mx-auto mb-3"><i class="fa-solid fa-glass-water"></i></div>
+                            <h3 class="h4 text-gold-dark font-serif">Resepsi Pernikahan</h3>
+                            <p class="mb-1"><i class="fa-regular fa-calendar me-2 text-gold"></i>Sabtu, 12 Desember 2026</p>
+                            <p class="mb-3"><i class="fa-regular fa-clock me-2 text-gold"></i>11.00 - 14.00 WIB</p>
+                            <div class="bg-light p-3 rounded-3 mb-3">
+                                <strong class="d-block text-dark">Grand Ballroom Hotel Grand Palace</strong>
+                                <span class="small text-muted">Jl. Ketintang, Surabaya, Jawa Timur</span>
+                            </div>
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold rounded-pill mt-auto">
+                                <i class="fa-solid fa-map-location-dot me-1"></i> Lihat Peta Lokasi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeri Foto -->
+        <section class="gallery-section py-5 bg-white">
+            <div class="container">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="section-title">Galeri Momen</h2>
+                    <p class="text-muted">Kenangan manis perjalanan cinta kami</p>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-6 col-md-3 reveal">
+                        <div class="gallery-item overflow-hidden rounded-3 shadow-sm" onclick="showModalImage('assets/img/ASET 1.jpg')">
+                            <img src="assets/img/ASET 1.jpg" alt="Galeri 1" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 reveal">
+                        <div class="gallery-item overflow-hidden rounded-3 shadow-sm" onclick="showModalImage('assets/img/ASET 2.jpg')">
+                            <img src="assets/img/ASET 2.jpg" alt="Galeri 2" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 reveal">
+                        <div class="gallery-item overflow-hidden rounded-3 shadow-sm" onclick="showModalImage('assets/img/ASET 3.jpg')">
+                            <img src="assets/img/ASET 3.jpg" alt="Galeri 3" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 reveal">
+                        <div class="gallery-item overflow-hidden rounded-3 shadow-sm" onclick="showModalImage('assets/img/ASET 4.jpg')">
+                            <img src="assets/img/ASET 4.jpg" alt="Galeri 4" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amplop Digital -->
+        <section class="gift-section py-5">
+            <div class="container">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="section-title">Amplop Digital</h2>
+                    <p class="text-muted max-w-600 mx-auto">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih, Anda dapat memberi hadiah secara digital.</p>
+                </div>
+
+                <div class="row g-4 justify-content-center reveal">
+                    <div class="col-md-5 col-lg-4">
+                        <div class="card card-custom text-center p-4 border-0 shadow-sm">
+                            <div class="fw-bold fs-4 text-gold-dark mb-2">BCA</div>
+                            <p class="font-monospace fs-5 fw-bold mb-1" id="norek-bca">1234 5678 90</p>
+                            <p class="small text-muted mb-3">MR.GRU</p>
+                            <button class="btn btn-outline-gold btn-sm rounded-pill w-100" onclick="copyText('norek-bca', 'Nomor rekening BCA berhasil disalin!')">
+                                <i class="fa-regular fa-copy me-1"></i> Salin Rekening
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 col-lg-4">
+                        <div class="card card-custom text-center p-4 border-0 shadow-sm">
+                            <div class="fw-bold fs-4 text-gold-dark mb-2">MANDIRI</div>
+                            <p class="font-monospace fs-5 fw-bold mb-1" id="norek-mandiri">0987 6543 21</p>
+                            <p class="small text-muted mb-3">MS.LUCY</p>
+                            <button class="btn btn-outline-gold btn-sm rounded-pill w-100" onclick="copyText('norek-mandiri', 'Nomor rekening Mandiri berhasil disalin!')">
+                                <i class="fa-regular fa-copy me-1"></i> Salin Rekening
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP & Ucapan -->
+        <section class="rsvp-section py-5 bg-white">
+            <div class="container">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="section-title">RSVP & Ucapan Doa</h2>
+                    <p class="text-muted">Mohon konfirmasi kehadiran dan berikan doa terbaik untuk kami.</p>
+                </div>
+
+                <div class="row g-4 reveal">
+                    <!-- Form RSVP -->
+                    <div class="col-lg-6">
+                        <div class="card card-custom p-4 border-0 shadow-sm">
+                            <form id="rsvp-form">
+                                <div class="mb-3">
+                                    <label for="input-nama" class="form-label fw-semibold">Nama Lengkap</label>
+                                    <input type="text" class="form-control" id="input-nama" placeholder="Masukkan nama Anda" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="input-kehadiran" class="form-label fw-semibold">Konfirmasi Kehadiran</label>
+                                    <select class="form-select" id="input-kehadiran" required>
+                                        <option value="" disabled selected>-- Pilih Kehadiran --</option>
+                                        <option value="Hadir">Ya, Saya Akan Hadir</option>
+                                        <option value="Tidak Hadir">Maaf, Saya Tidak Bisa Hadir</option>
+                                        <option value="Ragu-ragu">Masih Ragu-ragu</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="input-ucapan" class="form-label fw-semibold">Ucapan & Doa</label>
+                                    <textarea class="form-control" id="input-ucapan" rows="4" placeholder="Tuliskan ucapan selamat dan doa terbaik..." required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-gold w-100 rounded-pill py-2 fw-semibold">
+                                    <i class="fa-solid fa-paper-plane me-2"></i> Kirim Konfirmasi
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- List Ucapan -->
+                    <div class="col-lg-6">
+                        <div class="card card-custom p-4 border-0 shadow-sm h-100">
+                            <h3 class="h5 font-serif text-gold-dark mb-3">Doa & Ucapan (<span id="wishes-count">2</span>)</h3>
+                            <div id="wishes-list" class="wishes-list overflow-y-auto pe-2" style="max-height: 330px;">
+                                <div class="p-3 bg-light rounded-3 mb-2 shadow-xs">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <strong class="text-dark">Ahmad & Keluarga</strong>
+                                        <span class="badge bg-success">Hadir</span>
+                                    </div>
+                                    <p class="small text-secondary m-0">Selamat untuk MR.GRU & MS.LUCY! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah. Aamiin!</p>
+                                </div>
+
+                                <div class="p-3 bg-light rounded-3 mb-2 shadow-xs">
+                                    <div class="d-flex justify-content-between align-items-center mb-1">
+                                        <strong class="text-dark">Siti Rahma</strong>
+                                        <span class="badge bg-warning text-dark">Tidak Hadir</span>
+                                    </div>
+                                    <p class="small text-secondary m-0">Selamat ya MR.GRU & MS.LUCY! Maaf tidak bisa hadir langsung, doa terbaik untuk kalian berdua dari jauh.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-section py-4 bg-dark text-white text-center">
+            <div class="container">
+                <p class="footer-names display-4 text-gold-light m-0">MR.GRU & MS.LUCY</p>
+                <p class="text-light-50 small my-2">Terima kasih atas doa & restu Anda</p>
+                <hr class="border-secondary my-3 opacity-25">
+                <p class="small text-secondary m-0"></p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Modal Lightbox Galeri -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-0">
+                    <img id="modalGalleryImg" src="" alt="Galeri Foto" class="img-fluid rounded-3 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3" style="z-index: 1080;">
+        <div id="liveToast" class="toast align-items-center text-bg-dark border-0 rounded-pill shadow" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body px-4 py-2" id="toast-message">
+                    Pesan notifikasi
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
